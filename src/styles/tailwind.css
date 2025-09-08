@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import './animations.css';
+@import './glassmorphic.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme Colors */
+    --color-background: #F8FAFC; /* slate-50 */
+    --color-foreground: #1E293B; /* slate-800 */
+    --color-border: #E2E8F0; /* slate-200 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #3B82F6; /* blue-500 */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1E293B; /* slate-800 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1E293B; /* slate-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F1F5F9; /* slate-100 */
+    --color-muted-foreground: #64748B; /* slate-500 */
+    
+    /* Primary Colors - ThinkEd Green */
+    --color-primary: #4A9B8E; /* ThinkEd green */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #8B5CF6; /* violet-500 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors - ThinkEd Yellow */
+    --color-accent: #F59E0B; /* ThinkEd yellow */
+    --color-accent-foreground: #1E293B; /* dark text for yellow bg */
+    
+    /* Success Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error/Destructive Colors */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Glassmorphic Variables - Light */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    --backdrop-blur: blur(20px);
+    
+    /* Border Radius Scale */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    /* Shadow Levels */
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-2: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-3: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-4: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+    --shadow-5: 0 25px 50px rgba(0, 0, 0, 0.25);
+  }
+  
+  .dark {
+    /* Dark Theme Colors */
+    --color-background: #0F172A; /* slate-900 */
+    --color-foreground: #F1F5F9; /* slate-100 */
+    --color-border: #334155; /* slate-700 */
+    --color-input: #1E293B; /* slate-800 */
+    --color-ring: #60A5FA; /* blue-400 */
+    
+    /* Card Colors */
+    --color-card: #1E293B; /* slate-800 */
+    --color-card-foreground: #F1F5F9; /* slate-100 */
+    --color-popover: #1E293B; /* slate-800 */
+    --color-popover-foreground: #F1F5F9; /* slate-100 */
+    
+    /* Muted Colors */
+    --color-muted: #334155; /* slate-700 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Primary Colors - ThinkEd Green (adjusted for dark) */
+    --color-primary: #5BAE9F; /* lighter ThinkEd green */
+    --color-primary-foreground: #0F172A; /* dark text */
+    
+    /* Secondary Colors */
+    --color-secondary: #A78BFA; /* violet-400 */
+    --color-secondary-foreground: #1E1B4B; /* violet-900 */
+    
+    /* Accent Colors - ThinkEd Yellow (adjusted for dark) */
+    --color-accent: #FCD34D; /* yellow-300 */
+    --color-accent-foreground: #1E293B; /* dark text */
+    
+    /* Success Colors */
+    --color-success: #34D399; /* emerald-400 */
+    --color-success-foreground: #064E3B; /* emerald-900 */
+    
+    /* Warning Colors */
+    --color-warning: #FBBF24; /* amber-400 */
+    --color-warning-foreground: #451A03; /* amber-900 */
+    
+    /* Error/Destructive Colors */
+    --color-error: #F87171; /* red-400 */
+    --color-error-foreground: #7F1D1D; /* red-900 */
+    --color-destructive: #F87171; /* red-400 */
+    --color-destructive-foreground: #7F1D1D; /* red-900 */
+    
+    /* Glassmorphic Variables - Dark */
+    --glass-bg: rgba(30, 41, 59, 0.1);
+    --glass-border: rgba(100, 116, 139, 0.2);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --backdrop-blur: blur(20px);
+    
+    /* Shadow Levels - Dark */
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-2: 0 4px 6px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-3: 0 10px 15px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow-4: 0 20px 25px rgba(0, 0, 0, 0.3), 0 10px 10px rgba(0, 0, 0, 0.15);
+    --shadow-5: 0 25px 50px rgba(0, 0, 0, 0.4);
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz' 32;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Glassmorphic utilities */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Modern glassmorphic card - simplified */
+  .modern-glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .modern-glass-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .dark .modern-glass-card {
+    background: rgba(30, 41, 59, 0.08);
+    border: 1px solid rgba(100, 116, 139, 0.15);
+  }
+
+  .dark .modern-glass-card:hover {
+    background: rgba(30, 41, 59, 0.12);
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Typography Components */
+  .heading-1 {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .heading-2 {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .heading-3 {
+    @apply text-xl sm:text-2xl font-semibold tracking-tight;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .heading-4 {
+    @apply text-lg sm:text-xl font-medium tracking-tight;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .body-large {
+    @apply text-base sm:text-lg font-normal;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .body-medium {
+    @apply text-sm sm:text-base font-normal;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .body-small {
+    @apply text-xs sm:text-sm font-normal;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .caption {
+    @apply text-xs font-normal text-muted-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .code {
+    @apply text-sm font-normal;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  /* Glassmorphic Card Component */
+  .glass-card {
+    @apply glass rounded-lg p-4 sm:p-6;
+  }
+  
+  /* Animation Components */
+  .spring-bounce {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .spring-bounce:hover {
+    transform: translateY(-2px);
+  }
+  
+  .spring-bounce:active {
+    transform: translateY(0);
+  }
+
+  /* Responsive utilities */
+  .responsive-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row items-start sm:items-center gap-4;
+  }
+
+  /* ThinkEd Logo Styling */
+  .thinked-logo {
+    @apply transition-all duration-300;
+    filter: drop-shadow(0 2px 4px rgba(74, 155, 142, 0.2));
+  }
+
+  .dark .thinked-logo {
+    filter: drop-shadow(0 2px 4px rgba(91, 174, 159, 0.3));
+  }
+}
