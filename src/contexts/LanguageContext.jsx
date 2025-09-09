@@ -283,23 +283,23 @@ const translations = {
       errorMessage: "క్షమించండి, నేను ఇప్పుడు కనెక్ట్ చేయడంలో ఇబ్బంది పడుతున్నాను. దయచేసి ఒక క్షణంలో మళ్లీ ప్రయత్నించండి.",
       quickActions: {
         mathProblems: 'గణిత సమస్యలు',
-        scienceConcepts: 'సైన్స్ కాన్సెప్ట్స్',
+        scienceConcepts: 'విజ్ఞాన భావనలు',
         writingHelp: 'రాయడంలో సహాయం',
         generalQuestions: 'సాధారణ ప్రశ్నలు'
       },
       subjects: {
         general: 'సాధారణ',
         mathematics: 'గణితం',
-        science: 'సైన్స్',
+        science: 'విజ్ఞానం',
         english: 'ఇంగ్లీష్',
         history: 'చరిత్ర',
         programming: 'ప్రోగ్రామింగ్'
       },
       placeholder: 'మీ చదువుల గురించి ఏదైనా అడగండి...',
       quickSuggestions: {
-        explain: 'ఈ కాన్సెప్ట్‌ను వివరించండి',
+        explain: 'ఈ భావనను వివరించండి',
         example: 'నాకు ఉదాహరణ ఇవ్వండి',
-        practice: 'ప్రాక్టీస్ సమస్యలు',
+        practice: 'అభ్యాస సమస్యలు',
         check: 'నా పనిని తనిఖీ చేయండి'
       }
     },
@@ -332,7 +332,7 @@ const translations = {
       daysInRow: 'వరసగా రోజులు',
       coursesEnrolled: 'నమోదు చేసిన కోర్సులు',
       inProgress: 'ప్రగతిలో',
-      badgesEarned: 'సంపాదించిన బ్యాజ్లు',
+      badgesEarned: 'సంపాదించిన బ్యాజ్‌లు',
       thisWeek: 'ఈ వారం',
       quickActions: 'వేగ క్రియలు',
       continueLearning: 'అభ్యాసం కొనసాగించండి',
@@ -350,30 +350,44 @@ const translations = {
     },
     // Profile
     profile: {
-      achievements: 'మీ సాధనలu',
+      achievements: 'మీ సాధనలు',
       keepLearning: 'అధిక సాధనలు మరియు బ్యాజ్‌లను అన్‌లాక్ చేయడానికి నేర్చుకోవడం కొనసాగించండి!',
-      editProfile: 'ప్రొఫైల్ ఎడిట్ చేయండి',
+      editProfile: 'ప్రొఫైల్ సవరించండి',
       personalInfo: 'వ్యక్తిగత సమాచారం',
-      learningStats: 'అభ్యాస క్రమ గణాంకాలu',
+      learningStats: 'అభ్యాస క్రమ గణాంకాలు',
       joinedOn: 'చేరిన తేదీ',
       totalXP: 'మొత్తం XP',
       coursesCompleted: 'పూర్తి చేసిన కోర్సులు',
       currentStreak: 'ప్రస్తుత స్ట్రీక్',
       level: 'స్థాయి'
     },
+    // Badges
+    badges: {
+      achievements: 'సాధనలు',
+      viewAll: 'అన్నింటినీ చూడండి',
+      earned: 'సంపాదించినవి',
+      locked: 'లాక్ చేయబడినవి',
+      all: 'అన్ని',
+      recent: 'ఇటీవల',
+      rare: 'అరుదైనవి',
+      earnedOn: 'సంపాదించిన తేదీ',
+      progress: 'ప్రగతి',
+      requirement: 'అవసరం',
+      close: 'మూసివేయి'
+    },
     // Common
     common: {
-      loading: 'లోడ్ అవుతోంది...',
+      loading: 'లోడవుతోంది...',
       error: 'లోపం',
       success: 'విజయం',
-      cancel: 'రద్దు చేయండి',
-      save: 'సేవ్ చేయండి',
-      edit: 'సవరించండి',
-      delete: 'తొలగించండి',
-      close: 'మూసివేయండి',
-      settings: 'సెట్టింగ్‌లు',
+      cancel: 'రద్దు చేయి',
+      save: 'భద్రపరచు',
+      edit: 'సవరించు',
+      delete: 'తొలగించు',
+      close: 'మూసివేయి',
+      settings: 'అమరికలు',
       help: 'సహాయం',
-      logout: 'లాగ్ అవుట్'
+      logout: 'లాగౌట్'
     }
   },
   bn: {
@@ -437,12 +451,28 @@ const translations = {
         evening: 'শুভ সন্ধ্যা'
       },
       welcome: 'আপনার শিক্ষার যাত্রা চালিয়ে যেতে প্রস্তুত? আপনি দুর্দান্ত কাজ করছেন!',
-      quickActions: {
-        continueLearning: 'শেখা চালিয়ে যান',
-        askAiTutor: 'AI টিউটরকে জিজ্ঞাসা করুন',
-        joinDiscussion: 'আলোচনায় যোগ দিন',
-        takeQuiz: 'কুইজ নিন'
-      }
+      currentTime: 'বর্তমান সময়',
+      totalXP: 'মোট XP',
+      keepLearning: 'চালিয়ে যান!',
+      currentStreak: 'বর্তমান স্ট্রিক',
+      daysInRow: 'দিন ধারাবাহিকভাবে',
+      coursesEnrolled: 'নথিভুক্ত কোর্স',
+      inProgress: 'চলমান',
+      badgesEarned: 'অর্জিত ব্যাজ',
+      thisWeek: 'এই সপ্তাহে',
+      quickActions: 'দ্রুত কাজ',
+      continueLearning: 'শেখা চালিয়ে যান',
+      resumeLesson: 'আপনার শেষ পাঠটি পুনরায় শুরু করুন',
+      askAiTutor: 'এআই টিউটরকে জিজ্ঞাসা করুন',
+      getInstantHelp: 'যেকোনো বিষয়ে তাৎক্ষণিক সাহায্য পান',
+      joinDiscussion: 'আলোচনায় যোগ দিন',
+      connectWithPeers: 'সহপাঠীদের সাথে সংযোগ করুন',
+      takeQuiz: 'কুইজ নিন',
+      testKnowledge: 'আপনার জ্ঞান পরীক্ষা করুন',
+      readyForChallenge: 'একটি নতুন চ্যালেঞ্জের জন্য প্রস্তুত?',
+      exploreNewCourses: 'আপনার শেখার লক্ষ্য এবং আগ্রহ অনুযায়ী নতুন কোর্সগুলি অন্বেষণ করুন।',
+      exploreCourses: 'কোর্স অন্বেষণ করুন',
+      chatWithAiTutor: 'এআই টিউটরের সাথে চ্যাট করুন'
     },
     // Profile
     profile: {
