@@ -9,37 +9,37 @@ const SubjectSelector = ({ selectedSubject, onSubjectChange }) => {
   const subjects = [
     {
       id: 'general',
-      name: t('aiTutor.subjects.general'),
+      name: 'General',
       icon: 'BookOpen',
       color: '#4A9B8E'
     },
     {
       id: 'mathematics',
-      name: t('aiTutor.subjects.math'),
+      name: 'Math',
       icon: 'Calculator',
       color: '#F59E0B'
     },
     {
       id: 'science',
-      name: t('aiTutor.subjects.science'),
+      name: 'Science',
       icon: 'Atom',
       color: '#8B5CF6'
     },
     {
       id: 'english',
-      name: t('aiTutor.subjects.english'),
+      name: 'English',
       icon: 'FileText',
       color: '#10B981'
     },
     {
       id: 'history',
-      name: t('aiTutor.subjects.history'),
+      name: 'History',
       icon: 'Clock',
       color: '#EF4444'
     },
     {
       id: 'programming',
-      name: t('aiTutor.subjects.programming'),
+      name: 'Programming',
       icon: 'Code',
       color: '#3B82F6'
     }
