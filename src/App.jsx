@@ -6,7 +6,6 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import BackgroundEffects from "./components/layout/BackgroundEffects";
 import { performanceMonitor } from "./utils/animationConfig";
-import SpeedInsights from '@vercel/speed-insights/react';
 
 function App() {
   useEffect(() => {
@@ -24,26 +23,23 @@ function App() {
   }, []);
 
   return (
-    <>
-      <ThemeProvider>
-        <LanguageProvider>
-          <AppProvider>
-            <AuthProvider>
-              <div className="relative min-h-screen">
-              {/* Global Background Effects */}
-              <BackgroundEffects variant="minimal" className="fixed inset-0 z-0" />
-              
-              {/* Main Application */}
-              <div className="relative z-10">
-                <Routes />
-              </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <AppProvider>
+          <AuthProvider>
+            <div className="relative min-h-screen">
+            {/* Global Background Effects */}
+            <BackgroundEffects variant="minimal" className="fixed inset-0 z-0" />
+            
+            {/* Main Application */}
+            <div className="relative z-10">
+              <Routes />
             </div>
-            </AuthProvider>
-          </AppProvider>
-        </LanguageProvider>
-      </ThemeProvider>
-      <SpeedInsights />
-    </>
+          </div>
+          </AuthProvider>
+        </AppProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
