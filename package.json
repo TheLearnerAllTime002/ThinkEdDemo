@@ -69,8 +69,7 @@
     "dev": "vite",
     "start": "vite",
     "build": "vite build --sourcemap",
-    "serve": "vite preview",
-    "debug": "npm install --verbose"
+    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
