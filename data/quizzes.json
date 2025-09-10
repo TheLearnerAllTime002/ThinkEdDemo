@@ -1,0 +1,12 @@
+{
+  "algebra-quiz-1": {
+    "title": "Algebra Basics Quiz",
+    "questions": [
+      {
+        "question": "What is 2 + 2?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "4"
+      }
+    ]
+  }
+}

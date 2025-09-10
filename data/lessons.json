@@ -1,0 +1,10 @@
+[
+  {
+    "id": "math-101",
+    "subject": "Core Subjects",
+    "title": "Introduction to Algebra",
+    "description": "Learn the basics of algebraic expressions and equations.",
+    "content": "...",
+    "quizId": "algebra-quiz-1"
+  }
+]

@@ -1,0 +1,142 @@
+{
+  "landing": {
+    "stats": {
+      "activeStudents": "Active Students",
+      "coursesAvailable": "Courses Available",
+      "successRate": "Success Rate",
+      "languagesSupported": "Languages Supported"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "courses": "Courses",
+    "aiTutor": "AI Tutor",
+    "profile": "Profile",
+    "getStarted": "Get Started",
+    "forum": "Forum",
+    "notes": "Notes"
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "Good Morning",
+      "afternoon": "Good Afternoon",
+      "evening": "Good Evening"
+    },
+    "welcome": "Welcome back! Ready to continue your learning journey?",
+    "currentTime": "Current Time",
+    "totalXP": "Total XP",
+    "currentStreak": "Current Streak",
+    "coursesEnrolled": "Courses Enrolled",
+    "badgesEarned": "Badges Earned",
+    "keepLearning": "Keep learning to earn more!",
+    "daysInRow": "days in a row",
+    "inProgress": "in progress",
+    "thisWeek": "this week",
+    "quickActions": "Quick Actions",
+    "continueLearning": "Continue Learning",
+    "resumeLesson": "Resume your last lesson",
+    "askAiTutor": "Ask AI Tutor",
+    "getInstantHelp": "Get instant help with any topic",
+    "joinDiscussion": "Join Discussion",
+    "connectWithPeers": "Connect with fellow learners",
+    "takeQuiz": "Take Quiz",
+    "testKnowledge": "Test your knowledge",
+    "readyForChallenge": "Ready for a new challenge?",
+    "exploreNewCourses": "Explore new courses to expand your knowledge",
+    "exploreCourses": "Explore Courses",
+    "chatWithAiTutor": "Chat with AI Tutor",
+    "todaysLesson": "Today's Lesson",
+    "continue": "Continue",
+    "factOfDay": "Fact of the Day",
+    "nextFact": "Next Fact",
+    "dailyStreak": "Daily Streak"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email Address",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "orContinueWith": "Or continue with",
+    "noAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "createAccount": "Create Account",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "confirmPassword": "Confirm Password"
+  },
+  "courses": {
+    "browseCourses": "Browse Courses",
+    "recommended": "Recommended for You",
+    "allCourses": "All Courses",
+    "searchPlaceholder": "Search courses...",
+    "category": "Category",
+    "duration": "Duration",
+    "level": "Level",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "startCourse": "Start Course",
+    "continue": "Continue",
+    "completed": "Completed"
+  },
+  "aiTutor": {
+    "chatWithTutor": "Chat with AI Tutor",
+    "placeholder": "Ask me anything about your studies...",
+    "subject": "Subject",
+    "math": "Mathematics",
+    "science": "Science",
+    "history": "History",
+    "literature": "Literature",
+    "send": "Send"
+  },
+  "profile": {
+    "myProfile": "My Profile",
+    "editProfile": "Edit Profile",
+    "personalInfo": "Personal Information",
+    "changePassword": "Change Password",
+    "preferences": "Preferences",
+    "notifications": "Notifications",
+    "language": "Language",
+    "theme": "Theme",
+    "saveChanges": "Save Changes",
+    "cancel": "Cancel"
+  },
+  "forum": {
+    "communityForum": "Community Forum",
+    "newPost": "New Post",
+    "popular": "Popular",
+    "recent": "Recent",
+    "myPosts": "My Posts",
+    "postTitle": "Post Title",
+    "postContent": "What would you like to discuss?",
+    "post": "Post",
+    "reply": "Reply",
+    "replies": "Replies",
+    "postedBy": "Posted by",
+    "discussionForum": "Discussion Forum",
+    "chat": "Chat",
+    "typeMessage": "Type a message..."
+  },
+  "notes": {
+    "quickNotes": "Quick Notes",
+    "flashcards": "Flashcards",
+    "createNote": "Create Note",
+    "createFlashcard": "Create Flashcard",
+    "studyNow": "Study Now",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "accessibility": {
+    "textToSpeech": "Text to Speech",
+    "reducedMotion": "Reduced Motion",
+    "highContrast": "High Contrast"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "settings": "Settings",
+    "help": "Help",
+    "logout": "Logout"
+  }
+}

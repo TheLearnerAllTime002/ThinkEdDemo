@@ -1,0 +1,17 @@
+[
+  {
+    "id": "thread-1",
+    "title": "Having trouble with Algebra",
+    "author": "Student A",
+    "posts": [
+      {
+        "author": "Student A",
+        "content": "Can someone explain what a variable is?"
+      },
+      {
+        "author": "Student B",
+        "content": "A variable is a symbol that represents a number."
+      }
+    ]
+  }
+]
