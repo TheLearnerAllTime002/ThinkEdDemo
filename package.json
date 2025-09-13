@@ -2,8 +2,6 @@
   "name": "thinked",
   "version": "0.1.0",
   "private": true,
-  // rocketCritical field - Required for app functionality and build process
-  // DO NOT REMOVE: This field contains critical dependencies needed for the application
   "rocketCritical": {
     "dependencies": [
       "@dhiwise/component-tagger",
