@@ -7,7 +7,7 @@ const ContactFooter = () => {
   const socialLinks = [
     {
       name: 'Gmail',
-      url: 'mailto:contact@thinked.com',
+      url: 'mailto:arjunmitra003@gmail.com',
       icon: AiOutlineMail,
       color: 'text-red-600 hover:text-red-700'
     },
