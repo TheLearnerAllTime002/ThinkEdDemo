@@ -13,19 +13,19 @@ const ContactFooter = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/company/thinked',
+      url: 'https://www.linkedin.com/in/arjun-mitra-2761a9260/',
       icon: FaLinkedin,
       color: 'text-blue-600 hover:text-blue-700'
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/thinked',
+      url: 'https://github.com/TheLearnerAllTime002/ThinkEdDemo',
       icon: FaGithub,
       color: 'text-gray-800 hover:text-gray-900 dark:text-gray-200 dark:hover:text-white'
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/thinked',
+      url: 'https://x.com/ArjunMitra15888',
       icon: FaXTwitter,
       color: 'text-gray-900 hover:text-black dark:text-white dark:hover:text-gray-200'
     }
