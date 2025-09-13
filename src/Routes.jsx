@@ -23,7 +23,6 @@ const ConditionalNavigation = () => {
   return showNavigation ? <Navigation /> : null;
 };
 
-
 const Routes = () => {
   return (
     <BrowserRouter>
