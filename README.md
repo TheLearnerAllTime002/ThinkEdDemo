@@ -226,8 +226,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📄 Footer
 
 ### Project Links
-• 🌐 Live Site: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)]
-• 📂 Repository: [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)]
+🌐 Live Site: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)]
+📂 Repository: [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)]
 
 ### Connect with Me
 <div align="center">
