@@ -36,38 +36,60 @@
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: `#4A9B8E` (ThinkEd Teal)
-- **Secondary**: `#8B5CF6` (Violet)
-- **Accent**: `#F59E0B` (Amber)
-- **Background**: Light/Dark mode support
+- Primary: #4A9B8E (ThinkEd Teal)
+- Secondary: #8B5CF6 (Violet)
+- Accent: #F59E0B (Amber)
+- Background: Light/Dark mode support
 
 ### Typography
-- **Headings**: Inter (SemiBold)
-- **Body**: Inter (Regular)
-- **Code**: JetBrains Mono
+- Headings: Inter (SemiBold)
+- Body: Inter (Regular)
+- Code: JetBrains Mono
 
-## 🚀 Getting Started
+## 🚀 Installation
 
 ### Prerequisites
 - Node.js 16+
 - npm or yarn
 
-### Installation
+### Setup Steps
+
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/thinked.git](https://github.com/yourusername/thinked.git)
-cd thinked
+git clone https://github.com/TheLearnerAllTime002/ThinkEdDemo.git
+cd ThinkEdDemo
 
 # Install dependencies
 npm install
 
 # Start development server
 npm run dev
-undefined
-📱 Demo
+```
+
+## 📱 Usage
+
+### Demo Credentials
 Use these test credentials to explore the platform:
 
-Email: demo@thinked.com
-Password: demo123
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+- **Email:** demo@thinked.com
+- **Password:** demo123
+
+### Live Demo
+Visit the live application: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)
+
+## 📄 Footer
+
+### Project Links
+- 🌐 **Live Site:** [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)
+- 📂 **Repository:** [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)
+- 📧 **Contact:** [Email Developer](mailto:contact@thinked.com)
+
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <a href="https://github.com/TheLearnerAllTime002">TheLearnerAllTime002</a></p>
+  <p>© 2025 ThinkEd. All rights reserved.</p>
+</div>
