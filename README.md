@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/user-attachments/assets/f88420d7-8bff-4639-8bd2-6f0556a3eebf" alt="ThinkEd Logo" width="400"/>
+  <img src="https://github.com/user-attachments/assets/08b8a5af-921e-4c98-a4dc-1f38c799f248" alt="ThinkEd Logo" width="400"/>
 </div>
 
 # <div align="center">🎓 ThinkEd - AI-Powered Learning Platform</div>
@@ -20,10 +20,10 @@
 ## 🚀 Features
 
 <div align="center">
-<img src="https://img.icons8.com/fluency/96/000000/dashboard-layout.png" width="80" alt="Dashboard"/>
-<img src="https://img.icons8.com/fluency/96/000000/artificial-intelligence.png" width="80" alt="AI Tutor"/>
-<img src="https://img.icons8.com/fluency/96/000000/book.png" width="80" alt="Courses"/>
-<img src="https://img.icons8.com/fluency/96/000000/analytics.png" width="80" alt="Analytics"/>
+  <img src="https://img.icons8.com/fluency/96/000000/dashboard-layout.png" width="80" alt="Dashboard"/>
+  <img src="https://img.icons8.com/fluency/96/000000/artificial-intelligence.png" width="80" alt="AI Tutor"/>
+  <img src="https://img.icons8.com/fluency/96/000000/book.png" width="80" alt="Courses"/>
+  <img src="https://img.icons8.com/fluency/96/000000/analytics.png" width="80" alt="Analytics"/>
 </div>
 
 <details>
@@ -43,59 +43,48 @@
 - **24/7 Availability** - Get instant help whenever you need it
 - **Personalized Learning** - Adaptive content based on your progress and style
 - **Interactive Conversations** - Natural language processing for seamless communication
-- **Multi-subject Support** - Expertise across various academic disciplines
-- **Smart Recommendations** - Curated learning paths and resources
+- **Smart Explanations** - Complex concepts broken down into digestible parts
+- **Multi-modal Support** - Text, voice, and visual learning aids
 
 </details>
 
 <details>
 <summary>📖 **Interactive Courses**</summary>
 
-- **Engaging Content** - Interactive lessons with multimedia elements
-- **Progress Tracking** - Real-time monitoring of course completion
-- **Quizzes & Assessments** - Test your knowledge with interactive evaluations
-- **Certification System** - Earn certificates upon course completion
-- **Mobile-Friendly** - Learn anywhere, anytime on any device
+- **Gamified Learning** - Points, levels, and achievements to keep you motivated
+- **Adaptive Difficulty** - Content adjusts to your skill level automatically
+- **Rich Media Content** - Videos, animations, and interactive simulations
+- **Practice Exercises** - Hands-on coding challenges and quizzes
+- **Community Integration** - Connect with peers and mentors
 
 </details>
 
 <details>
 <summary>📈 **Progress Analytics**</summary>
 
-- **Detailed Reports** - Comprehensive insights into your learning patterns
-- **Performance Metrics** - Track completion rates, time spent, and accuracy
-- **Goal Tracking** - Monitor progress towards your learning objectives
-- **Comparative Analysis** - See how you stack up against peers
-- **Export Options** - Download reports and certificates
+- **Detailed Metrics** - Time spent, topics mastered, and areas for improvement
+- **Learning Streaks** - Track consistency and build positive habits
+- **Performance Predictions** - AI forecasts your success in upcoming topics
+- **Comparative Analysis** - See how you stack up against similar learners
+- **Export Reports** - Share progress with instructors or employers
 
 </details>
+
+---
 
 ## 🛠 Tech Stack
 
 ### Frontend Technologies
-
-[![React](https://img.shields.io/badge/React-18.2.0-%2361DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.0.0-%23646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React Router](https://img.shields.io/badge/React_Router-6.15.0-%23CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![React](https://img.shields.io/badge/React-18.2.0-%2361DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/) [![Vite](https://img.shields.io/badge/Vite-5.0.0-%23646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/) [![React Router](https://img.shields.io/badge/React_Router-6.15.0-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/) [![JavaScript](https://img.shields.io/badge/JavaScript-ES2023-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ### Styling & UI
-
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4.6-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.16.0-%230055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![PostCSS](https://img.shields.io/badge/PostCSS-8.4.31-%23DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4.6-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) [![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.16.4-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/motion/) [![PostCSS](https://img.shields.io/badge/PostCSS-8.4.31-%23DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)](https://postcss.org/)
 
 ### Backend & Database
-
-[![Firebase](https://img.shields.io/badge/Firebase-12.2.1-%23FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![Firestore](https://img.shields.io/badge/Firestore-12.2.1-%23FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/products/firestore)
+[![Firebase](https://img.shields.io/badge/Firebase-10.3.1-%23039BE5?style=for-the-badge&logo=firebase)](https://firebase.google.com/) [![Firestore](https://img.shields.io/badge/Firestore-Database-%23039BE5?style=for-the-badge&logo=firebase)](https://firebase.google.com/products/firestore)
 
 ### Development Tools
-
-[![ESLint](https://img.shields.io/badge/ESLint-8.45.0-%234B32C3?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
-[![Prettier](https://img.shields.io/badge/Prettier-3.0.0-%23F7B93E?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/)
-[![Git](https://img.shields.io/badge/Git-2.41.0-%23F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-Actions-%23181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![ESLint](https://img.shields.io/badge/ESLint-8.49.0-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/) [![Prettier](https://img.shields.io/badge/Prettier-3.0.3-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/) [![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 
 | Category | Technologies |
 |----------|-------------|
@@ -106,14 +95,16 @@
 | **UI/UX** | Glassmorphism Design, Responsive Layouts |
 | **Development** | ESLint, Prettier, Hot Reload |
 
+---
+
 ## 🎨 Design System
 
 ### Color Palette
-- • 🎨 **Primary**: #4A9B8E (ThinkEd Teal)
-- • 🎨 **Secondary**: #8B5CF6 (Violet)
-- • 🎨 **Accent**: #F59E0B (Amber)
-- • 🎨 **Background**: Light/Dark mode support
-- • 🎨 **Text**: Adaptive contrast for accessibility
+- 🎨 **Primary**: #4A9B8E (ThinkEd Teal)
+- 🎨 **Secondary**: #8B5CF6 (Violet)
+- 🎨 **Accent**: #F59E0B (Amber)
+- 🎨 **Background**: Light/Dark mode support
+- 🎨 **Text**: Adaptive contrast for accessibility
 
 ### Typography
 - **Headings**: Inter (SemiBold)
@@ -122,11 +113,13 @@
 - **Icons**: Lucide React, Heroicons
 
 ### Component Library
-- • Glassmorphism cards and containers
-- • Smooth animations and transitions
-- • Responsive grid layouts
-- • Interactive buttons and forms
-- • Progress indicators and badges
+- ✨ Glassmorphism cards and containers
+- 🎭 Smooth animations and transitions
+- 📱 Responsive grid layouts
+- 🎯 Interactive buttons and forms
+- 📊 Progress indicators and badges
+
+---
 
 ## 🚀 Installation
 
@@ -168,6 +161,8 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
 ```
 
+---
+
 ## 📱 Usage
 
 ### Demo Credentials
@@ -183,6 +178,8 @@ Use these test credentials to explore the platform:
 2. **AI Tutor**: Ask questions and get personalized help
 3. **Courses**: Browse and enroll in interactive courses
 4. **Analytics**: Track your learning metrics and performance
+
+---
 
 ## 📊 Project Structure
 
@@ -207,6 +204,8 @@ ThinkEdDemo/
 └── README.md
 ```
 
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -217,25 +216,31 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+---
+
 ## 📄 Footer
 
 ### Project Links
-- • 🌐 **Live Site**: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)
-- • 📂 **Repository**: [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)
-- • 📧 **Contact**: [Email Developer](mailto:contact@thinked.com)
-- • 💼 **Portfolio**: [TheLearnerAllTime002](https://github.com/TheLearnerAllTime002)
+- 🌐 **Live Site**: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)
+- 📂 **Repository**: [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)
+- 📧 **Contact**: [Email Developer](mailto:contact@thinked.com)
+- 💼 **Portfolio**: [TheLearnerAllTime002](https://github.com/TheLearnerAllTime002)
 
 ### Performance Stats
-
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-%23000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-[![Lighthouse](https://img.shields.io/badge/Lighthouse-100%2F100-%23F44B21?style=for-the-badge&logo=lighthouse&logoColor=white)](https://developers.google.com/web/tools/lighthouse)
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/) [![Lighthouse](https://img.shields.io/badge/Lighthouse-F44B21?style=for-the-badge&logo=Lighthouse&logoColor=white)](https://developers.google.com/web/tools/lighthouse)
 
 ### License
-
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/TheLearnerAllTime002/ThinkEdDemo/blob/main/LICENSE) file for details.
 
-**Made with ❤️ by [TheLearnerAllTime002](https://github.com/TheLearnerAllTime002)**
+---
 
-© 2025 ThinkEd. All rights reserved.
+<div align="center">
+  <b>Made with ❤️ by <a href="https://github.com/TheLearnerAllTime002">TheLearnerAllTime002</a></b><br>
+  © 2025 ThinkEd. All rights reserved.
+</div>
+
+<div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/TheLearnerAllTime002/ThinkEdDemo?style=social)](https://github.com/TheLearnerAllTime002/ThinkEdDemo) [![GitHub forks](https://img.shields.io/github/forks/TheLearnerAllTime002/ThinkEdDemo?style=social)](https://github.com/TheLearnerAllTime002/ThinkEdDemo/fork)
+
+</div>
