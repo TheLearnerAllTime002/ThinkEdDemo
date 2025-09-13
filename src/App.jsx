@@ -13,7 +13,6 @@ function App() {
     if (process.env.NODE_ENV === 'development') {
       performanceMonitor.startMonitoring();
     }
-
     // Cleanup on unmount
     return () => {
       if (process.env.NODE_ENV === 'development') {
@@ -28,14 +27,14 @@ function App() {
         <AppProvider>
           <AuthProvider>
             <div className="relative min-h-screen">
-            {/* Global Background Effects */}
-            <BackgroundEffects variant="minimal" className="fixed inset-0 z-0" />
-            
-            {/* Main Application */}
-            <div className="relative z-10">
-              <Routes />
+              {/* Global Background Effects */}
+              <BackgroundEffects className="fixed inset-0 z-0" variant="minimal" />
+              
+              {/* Main Application */}
+              <div className="relative z-10">
+                <Routes />
+              </div>
             </div>
-          </div>
           </AuthProvider>
         </AppProvider>
       </LanguageProvider>
