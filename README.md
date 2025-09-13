@@ -226,8 +226,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📄 Footer
 
 ### Project Links
-• 🌐 Live Site: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)
-• 📂 Repository: [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)
+• 🌐 Live Site: [think-ed-demo.vercel.app](https://think-ed-demo.vercel.app/)]
+• 📂 Repository: [GitHub](https://github.com/TheLearnerAllTime002/ThinkEdDemo)]
 
 ### Connect with Me
 <div align="center">
@@ -235,7 +235,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arjun-mitra-2761a9260/)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/ArjunMitra15888)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arjunmitra003@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TheLearnerAllTime002/ThinkEdDemo)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TheLearnerAllTime002)
 
 </div>
 
