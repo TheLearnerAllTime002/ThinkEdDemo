@@ -78,6 +78,24 @@ const Header = () => {
     }
   }, [currentUser]);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (isMenuOpen && !e.target.closest('.dropdown-container')) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   const handleNavigation = (path) => {
     navigate(path);
     setIsMenuOpen(false);
@@ -102,7 +120,7 @@ const Header = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-100 glass border-b border-glass-border">
+    <header className="fixed top-0 left-0 right-0 z-100 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200/50 dark:border-slate-700/50">
       <div className="responsive-container">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo Section */}
@@ -155,7 +173,7 @@ const Header = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.2 }}
-                  className="flex items-center space-x-2 px-2 sm:px-3 py-1.5 rounded-full glass"
+                  className="flex items-center space-x-2 px-2 sm:px-3 py-1.5 rounded-full bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50"
                 >
                   <Icon name="Zap" size={16} color="var(--color-warning)" />
                   <span className="text-xs sm:text-sm font-medium text-warning">{xpCount} XP</span>
@@ -164,7 +182,7 @@ const Header = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: 0.3 }}
-                  className="flex items-center space-x-2 px-2 sm:px-3 py-1.5 rounded-full glass"
+                  className="flex items-center space-x-2 px-2 sm:px-3 py-1.5 rounded-full bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50"
                 >
                   <Icon name="Flame" size={16} color="var(--color-accent)" />
                   <span className="text-xs sm:text-sm font-medium text-accent">{streakCount} days</span>
@@ -182,29 +200,41 @@ const Header = () => {
             </motion.div>
 
 
-
             {/* More Menu - Desktop */}
-            <div className="hidden lg:block relative">
+            <div className="hidden lg:block relative dropdown-container">
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsMenuOpen(!isMenuOpen);
+                }}
                 iconName="MoreHorizontal"
                 className="spring-bounce"
+                aria-label="Open user menu"
               />
               
               {isMenuOpen && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.95, y: -10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                  className="absolute right-0 top-full mt-2 w-48 glass rounded-lg shadow-3 border border-glass-border overflow-hidden"
+                  transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                  className="absolute right-0 top-full mt-2 w-48 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-lg shadow-3 border border-slate-200/50 dark:border-slate-700/50 overflow-hidden z-50"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   {secondaryItems?.map((item, index) => (
                     <button
                       key={index}
-                      onClick={item?.action}
-                      className="w-full flex items-center space-x-3 px-4 py-3 text-sm hover:bg-muted/50 transition-colors"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        item?.action();
+                        setIsMenuOpen(false);
+                      }}
+                      className="w-full flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-100/60 dark:hover:bg-slate-800/60 transition-colors"
+                      type="button"
                     >
                       <Icon name={item?.icon} size={16} />
                       <span>{item?.label}</span>

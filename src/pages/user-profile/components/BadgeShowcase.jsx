@@ -52,7 +52,7 @@ const BadgeShowcase = ({ badges }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-glass-border"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50"
     >
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -95,10 +95,10 @@ const BadgeShowcase = ({ badges }) => {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setSelectedBadge(badge)}
-            className={`glass rounded-2xl p-4 sm:p-5 cursor-pointer transition-all duration-300 border shadow-sm hover:shadow-md ${
+            className={`bg-slate-50/80 dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 cursor-pointer transition-all duration-300 border border-slate-200/50 dark:border-slate-700/50 shadow-sm hover:shadow-md ${
               badge?.earned 
-                ? 'border-glass-border hover:border-primary/50 ring-1 ring-primary/10' 
-                : 'border-glass-border opacity-60 hover:opacity-80 hover:border-muted/50'
+                ? 'hover:border-primary/50 ring-1 ring-primary/10' 
+                : 'opacity-60 hover:opacity-80 hover:border-slate-300/50 dark:hover:border-slate-600/50'
             }`}
           >
             <div className="text-center">
@@ -143,7 +143,7 @@ const BadgeShowcase = ({ badges }) => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e?.stopPropagation()}
-              className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-md w-full border border-glass-border shadow-2xl"
+              className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-md w-full border border-slate-200/50 dark:border-slate-700/50 shadow-2xl"
             >
               <div className="text-center mb-6">
                 <div className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${

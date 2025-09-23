@@ -24,7 +24,7 @@ const AuthCard = ({ children, activeTab }) => {
       animate="visible"
       className="w-full max-w-md mx-auto"
     >
-      <div className="modern-glass-card p-6 sm:p-10 hover:shadow-primary/20 transition-shadow duration-300">
+      <div className="bg-white dark:bg-slate-900 p-6 sm:p-10 shadow-2xl transition-shadow duration-300 border border-slate-200 dark:border-slate-700 rounded-xl">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">
           <motion.div

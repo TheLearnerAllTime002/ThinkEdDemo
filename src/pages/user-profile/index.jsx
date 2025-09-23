@@ -209,7 +209,7 @@ const UserProfile = () => {
   if (!user) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="glass rounded-xl p-8 text-center">
+        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-8 text-center border border-slate-200/50 dark:border-slate-700/50">
           <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
           <p className="text-muted-foreground">Loading profile...</p>
         </div>
@@ -267,7 +267,7 @@ const UserProfile = () => {
               {/* Right Column */}
               <div className="space-y-8">
                 {/* Additional profile information could go here in the future */}
-                <div className="glass rounded-xl p-6 text-center">
+                <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 text-center border border-slate-200/50 dark:border-slate-700/50">
                   <Icon name="Trophy" size={48} color="var(--color-primary)" className="mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-foreground mb-2">{t('profile.achievements')}</h3>
                   <p className="text-muted-foreground">

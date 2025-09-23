@@ -60,7 +60,7 @@ const AchievementTimeline = ({ achievements, xpData, currentLanguage }) => {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload?.length) {
       return (
-        <div className="glass rounded-lg p-3 border border-glass-border">
+        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-lg p-3 border border-slate-200/50 dark:border-slate-700/50">
           <p className="text-sm font-medium">{`${t?.date}: ${label}`}</p>
           <p className="text-sm text-primary">
             {`${t?.xpEarned}: ${payload?.[0]?.value}`}
@@ -76,7 +76,7 @@ const AchievementTimeline = ({ achievements, xpData, currentLanguage }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.6 }}
-      className="glass rounded-xl p-6 border border-glass-border"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50"
     >
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -131,7 +131,7 @@ const AchievementTimeline = ({ achievements, xpData, currentLanguage }) => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-center space-x-4 p-4 glass rounded-lg border border-glass-border hover:border-primary/30 transition-colors"
+                className="flex items-center space-x-4 p-4 bg-slate-50/80 dark:bg-slate-800/80 rounded-lg border border-slate-200/50 dark:border-slate-700/50 hover:border-primary/30 transition-colors"
               >
                 <div 
                   className="w-12 h-12 rounded-full flex items-center justify-center"

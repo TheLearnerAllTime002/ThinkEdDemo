@@ -13,7 +13,7 @@ const ProfileHeader = ({ user, onEditProfile }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="glass rounded-2xl sm:rounded-3xl p-6 lg:p-8 border border-glass-border"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 lg:p-8 border border-slate-200/50 dark:border-slate-700/50"
     >
       <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8">
         {/* Avatar Section */}
@@ -43,7 +43,7 @@ const ProfileHeader = ({ user, onEditProfile }) => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="glass rounded-2xl p-4 text-center ring-1 ring-warning/10">
+            <div className="bg-slate-50/80 dark:bg-slate-800/80 rounded-2xl p-4 text-center border border-slate-200/50 dark:border-slate-700/50">
               <div className="flex items-center justify-center mb-2">
                 <div className="w-8 h-8 rounded-full bg-warning/20 flex items-center justify-center">
                   <Icon name="Zap" size={16} color="var(--color-warning)" />
@@ -53,7 +53,7 @@ const ProfileHeader = ({ user, onEditProfile }) => {
               <div className="text-xs text-muted-foreground">{t('profile.totalXP')}</div>
             </div>
 
-            <div className="glass rounded-2xl p-4 text-center ring-1 ring-success/10">
+            <div className="bg-slate-50/80 dark:bg-slate-800/80 rounded-2xl p-4 text-center border border-slate-200/50 dark:border-slate-700/50">
               <div className="flex items-center justify-center mb-2">
                 <div className="w-8 h-8 rounded-full bg-success/20 flex items-center justify-center">
                   <Icon name="BookOpen" size={16} color="var(--color-success)" />
@@ -63,7 +63,7 @@ const ProfileHeader = ({ user, onEditProfile }) => {
               <div className="text-xs text-muted-foreground">{t('profile.coursesCompleted')}</div>
             </div>
 
-            <div className="glass rounded-2xl p-4 text-center ring-1 ring-accent/10">
+            <div className="bg-slate-50/80 dark:bg-slate-800/80 rounded-2xl p-4 text-center border border-slate-200/50 dark:border-slate-700/50">
               <div className="flex items-center justify-center mb-2">
                 <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
                   <Icon name="Flame" size={16} color="var(--color-accent)" />
@@ -73,7 +73,7 @@ const ProfileHeader = ({ user, onEditProfile }) => {
               <div className="text-xs text-muted-foreground">{t('profile.currentStreak')}</div>
             </div>
 
-            <div className="glass rounded-2xl p-4 text-center ring-1 ring-secondary/10">
+            <div className="bg-slate-50/80 dark:bg-slate-800/80 rounded-2xl p-4 text-center border border-slate-200/50 dark:border-slate-700/50">
               <div className="flex items-center justify-center mb-2">
                 <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center">
                   <Icon name="Trophy" size={16} color="var(--color-secondary)" />

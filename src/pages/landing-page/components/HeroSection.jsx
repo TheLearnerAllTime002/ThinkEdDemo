@@ -66,7 +66,7 @@ const HeroSection = () => {
     return (
       <motion.div
         variants={itemVariants}
-        className="text-center modern-glass-card p-6 lg:p-8 rounded-2xl group cursor-pointer backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl hover:shadow-primary/20"
+        className="text-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm p-6 lg:p-8 rounded-2xl group cursor-pointer border border-slate-200/50 dark:border-slate-700/50 shadow-2xl hover:shadow-primary/20"
         whileHover={{ 
           y: -8,
           scale: 1.05,

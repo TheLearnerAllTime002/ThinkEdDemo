@@ -12,14 +12,15 @@ import UserProfile from './pages/user-profile';
 import { motion } from 'framer-motion';
 import Navigation from './components/layout/Navigation';
 import NotificationSystem from './components/ui/NotificationSystem';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const ConditionalNavigation = () => {
   const location = useLocation();
-  
+
   // Only show Navigation component on landing page
   // Header component is included within individual dashboard pages
   const showNavigation = location.pathname === '/' || location.pathname === '/landing-page';
-  
+
   return showNavigation ? <Navigation /> : null;
 };
 
@@ -33,10 +34,26 @@ const Routes = () => {
         <RouterRoutes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/authentication" element={<Authentication />} />
-          <Route path="/courses-overview" element={<CoursesOverview />} />
-          <Route path="/ai-tutor-chat" element={<AITutorChat />} />
-          <Route path="/student-dashboard" element={<StudentDashboard />} />
-          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/courses-overview" element={
+            <ProtectedRoute>
+              <CoursesOverview />
+            </ProtectedRoute>
+          } />
+          <Route path="/ai-tutor-chat" element={
+            <ProtectedRoute>
+              <AITutorChat />
+            </ProtectedRoute>
+          } />
+          <Route path="/student-dashboard" element={
+            <ProtectedRoute>
+              <StudentDashboard />
+            </ProtectedRoute>
+          } />
+          <Route path="/user-profile" element={
+            <ProtectedRoute>
+              <UserProfile />
+            </ProtectedRoute>
+          } />
           <Route path="*" element={<NotFound />} />
         </RouterRoutes>
       </ErrorBoundary>

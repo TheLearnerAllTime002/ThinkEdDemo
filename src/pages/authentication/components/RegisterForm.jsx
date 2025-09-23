@@ -100,7 +100,7 @@ const RegisterForm = ({ onSubmit, loading }) => {
         onChange={handleChange}
         error={errors?.fullName}
         required
-        className="glass-input"
+        className="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-600 focus:bg-white dark:focus:bg-slate-700"
       />
       <Input
         label="Email Address"
@@ -111,7 +111,7 @@ const RegisterForm = ({ onSubmit, loading }) => {
         onChange={handleChange}
         error={errors?.email}
         required
-        className="glass-input"
+        className="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-600 focus:bg-white dark:focus:bg-slate-700"
       />
       <div className="relative">
         <Input
@@ -123,7 +123,7 @@ const RegisterForm = ({ onSubmit, loading }) => {
           onChange={handleChange}
           error={errors?.password}
           required
-          className="glass-input pr-12"
+          className="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-600 focus:bg-white dark:focus:bg-slate-700 pr-12"
         />
         <button
           type="button"
@@ -143,7 +143,7 @@ const RegisterForm = ({ onSubmit, loading }) => {
           onChange={handleChange}
           error={errors?.confirmPassword}
           required
-          className="glass-input pr-12"
+          className="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-600 focus:bg-white dark:focus:bg-slate-700 pr-12"
         />
         <button
           type="button"

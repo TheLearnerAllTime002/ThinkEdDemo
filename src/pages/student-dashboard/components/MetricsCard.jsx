@@ -8,7 +8,7 @@ const MetricsCard = ({ title, value, icon, color, subtitle, trend }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="modern-glass-card rounded-xl p-6 spring-bounce hover:shadow-3"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 spring-bounce hover:shadow-lg border border-slate-200/50 dark:border-slate-700/50"
     >
       <div className="flex items-center justify-between mb-4">
         <div className={`p-3 rounded-lg bg-gradient-to-br ${color}`}>

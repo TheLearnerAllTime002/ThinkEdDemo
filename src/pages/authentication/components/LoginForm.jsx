@@ -72,7 +72,7 @@ const LoginForm = ({ onSubmit, loading }) => {
         onChange={handleChange}
         error={errors?.email}
         required
-        className="glass-input"
+        className="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-600 focus:bg-white dark:focus:bg-slate-700"
       />
       <div className="relative">
         <Input
@@ -84,7 +84,7 @@ const LoginForm = ({ onSubmit, loading }) => {
           onChange={handleChange}
           error={errors?.password}
           required
-          className="glass-input pr-12"
+          className="bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-600 focus:bg-white dark:focus:bg-slate-700 pr-12"
         />
         <button
           type="button"

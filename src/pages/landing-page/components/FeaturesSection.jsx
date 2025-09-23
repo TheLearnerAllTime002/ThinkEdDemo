@@ -85,7 +85,7 @@ const FeaturesSection = () => {
   const FeatureCard = ({ feature, index }) => (
     <motion.div
       variants={cardVariants}
-      className={`modern-glass-card p-8 lg:p-10 group cursor-pointer relative overflow-hidden backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl hover:shadow-[#4A9B8E]/20 rounded-2xl ${
+      className={`bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm p-8 lg:p-10 group cursor-pointer relative overflow-hidden border border-slate-200/50 dark:border-slate-700/50 shadow-2xl hover:shadow-[#4A9B8E]/20 rounded-2xl ${
         feature?.featured ? 'ring-2 ring-[#4A9B8E]/30 ring-offset-2 ring-offset-transparent' : ''
       }`}
       onClick={feature?.action}
@@ -225,7 +225,7 @@ const FeaturesSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         >
-          <div className="modern-glass-card p-12 lg:p-16 max-w-4xl mx-auto backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-2xl">
+          <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm p-12 lg:p-16 max-w-4xl mx-auto border border-slate-200/50 dark:border-slate-700/50 shadow-2xl rounded-2xl">
             <h3 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 bg-gradient-to-r from-[#4A9B8E] to-[#F59E0B] bg-clip-text text-transparent">
               Ready to Transform Your Learning?
             </h3>

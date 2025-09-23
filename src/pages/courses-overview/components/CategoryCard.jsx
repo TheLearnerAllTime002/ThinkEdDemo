@@ -37,8 +37,8 @@ const CategoryCard = ({ category, onSelect, isSelected }) => {
       whileHover={{ y: -4, scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       onClick={() => onSelect(category)}
-      className={`glass rounded-xl p-6 cursor-pointer transition-all duration-300 ${
-        isSelected ? 'ring-2 ring-primary shadow-lg' : 'hover:shadow-xl'
+      className={`bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 cursor-pointer transition-all duration-300 border border-slate-200/50 dark:border-slate-700/50 relative ${
+        isSelected ? 'ring-2 ring-primary shadow-lg' : 'hover:shadow-xl hover:border-slate-300/50 dark:hover:border-slate-600/50'
       }`}
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${getGradientClass()} rounded-xl opacity-50`} />

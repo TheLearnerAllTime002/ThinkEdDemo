@@ -31,7 +31,7 @@ const CourseCard = ({ course, onSelect }) => {
       whileHover={{ y: -2, scale: 1.01 }}
       whileTap={{ scale: 0.99 }}
       onClick={() => onSelect(course)}
-      className="glass rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl flex flex-col h-full"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl border border-slate-200/50 dark:border-slate-700/50 flex flex-col h-full"
     >
       <div className="relative h-40 overflow-hidden">
         <Image

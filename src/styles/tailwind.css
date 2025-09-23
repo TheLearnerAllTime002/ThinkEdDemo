@@ -264,6 +264,58 @@
     @apply flex flex-col sm:flex-row items-start sm:items-center gap-4;
   }
 
+  /* Mobile Touch Optimizations */
+  .touch-optimized {
+    @apply min-h-[44px] min-w-[44px];
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(74, 155, 142, 0.2);
+  }
+
+  .touch-target {
+    @apply min-h-[48px] min-w-[48px] sm:min-h-[44px] sm:min-w-[44px];
+  }
+
+  /* Mobile-specific glass effects */
+  @media (max-width: 768px) {
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .glass {
+      background: rgba(15, 23, 42, 0.15);
+      border: 1px solid rgba(100, 116, 139, 0.2);
+    }
+
+    /* Reduce animations on mobile for better performance */
+    .glass,
+    .glass-card,
+    .glass-button {
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    }
+  }
+
+  /* Improved mobile typography */
+  @media (max-width: 640px) {
+    .heading-1 {
+      @apply text-2xl sm:text-3xl;
+    }
+
+    .heading-2 {
+      @apply text-xl sm:text-2xl;
+    }
+
+    .heading-3 {
+      @apply text-lg sm:text-xl;
+    }
+
+    .body-large {
+      @apply text-sm sm:text-base;
+    }
+  }
+
   /* ThinkEd Logo Styling */
   .thinked-logo {
     @apply transition-all duration-300;

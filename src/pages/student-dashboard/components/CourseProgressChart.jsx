@@ -47,7 +47,7 @@ const CourseProgressChart = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="modern-glass-card rounded-xl p-6"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50"
     >
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-foreground">Course Progress</h2>
@@ -97,7 +97,7 @@ const CourseProgressChart = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-4 space-y-3 pt-4 border-t border-glass-border">
+      <div className="mt-4 space-y-3 pt-4 border-t border-slate-200/50 dark:border-slate-700/50">
         {courseData?.map((course, index) => (
           <motion.div
             key={course?.subject}

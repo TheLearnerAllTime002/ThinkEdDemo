@@ -61,7 +61,7 @@ const ProgressStats = ({ stats }) => {
           key={index}
           variants={itemVariants}
           whileHover={{ scale: 1.02, y: -2 }}
-          className="glass rounded-lg p-4"
+          className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-lg p-4 border border-slate-200/50 dark:border-slate-700/50"
         >
           <div className="flex items-center space-x-3">
             <div className={`w-10 h-10 rounded-lg ${item?.bgColor} flex items-center justify-center`}>

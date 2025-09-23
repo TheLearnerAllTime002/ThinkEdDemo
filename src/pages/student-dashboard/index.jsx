@@ -87,7 +87,7 @@ const StudentDashboard = () => {
             transition={{ duration: 0.6 }}
             className="mb-6 sm:mb-8"
           >
-            <div className="glass rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8">
+            <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-slate-200/50 dark:border-slate-700/50">
               <div className="responsive-flex lg:justify-between">
                 <div className="mb-4 lg:mb-0">
                   <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2">
@@ -165,7 +165,7 @@ const StudentDashboard = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
                   onClick={action?.action}
-                  className="modern-glass-card rounded-lg sm:rounded-xl p-4 text-left hover:shadow-lg transition-all duration-300 spring-bounce group"
+                  className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 text-left hover:shadow-lg transition-all duration-300 spring-bounce group border border-slate-200/50 dark:border-slate-700/50"
                 >
                   <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br ${action?.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                     <Icon name={action?.icon} size={20} color="white" />
@@ -208,7 +208,7 @@ const StudentDashboard = () => {
             transition={{ duration: 0.6, delay: 1.2 }}
             className="mt-6 sm:mt-8"
           >
-            <div className="modern-glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-center">
+            <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 text-center border border-slate-200/50 dark:border-slate-700/50">
               <div className="max-w-2xl mx-auto">
                 <h2 className="heading-3 text-foreground mb-4">
                   {t('dashboard.readyForChallenge')}

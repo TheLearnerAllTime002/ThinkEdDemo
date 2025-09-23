@@ -134,7 +134,7 @@ const MobileMenu = ({
         <>
           {/* Backdrop Overlay */}
           <motion.div
-            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 bg-black/80 dark:bg-black/90 lg:hidden"
             {...overlayVariants}
             onClick={onClose}
             aria-hidden="true"
@@ -144,8 +144,8 @@ const MobileMenu = ({
           <motion.div
             ref={menuRef}
             className={cn(
-              'fixed top-0 right-0 bottom-0 z-50 w-80 max-w-[85vw] lg:hidden',
-              'glass-modal border-l border-white/10 shadow-2xl',
+              'fixed top-0 right-0 bottom-0 z-50 w-72 sm:w-80 md:w-96 max-w-[90vw] sm:max-w-[85vw] lg:hidden',
+              'bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-700 shadow-2xl',
               variant === 'fullscreen' && 'w-full max-w-none',
               className
             )}
@@ -155,8 +155,8 @@ const MobileMenu = ({
             aria-label="Mobile navigation menu"
           >
             {/* Menu Header */}
-            <motion.div 
-              className="flex items-center justify-between p-6 border-b border-white/10"
+            <motion.div
+              className="flex items-center justify-between p-4 sm:p-6 border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
               variants={itemVariants}
             >
               <div className="flex items-center space-x-3">
@@ -168,7 +168,7 @@ const MobileMenu = ({
               
               <motion.button
                 onClick={onClose}
-                className="p-2 rounded-lg glass-button hover:bg-white/10 transition-colors"
+                className="p-2 rounded-lg bg-slate-100/80 dark:bg-slate-800/80 hover:bg-slate-200/80 dark:hover:bg-slate-700/80 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white transition-all duration-200 touch-manipulation min-w-[44px] min-h-[44px]"
                 {...hamburgerVariants}
                 aria-label="Close menu"
               >
@@ -178,17 +178,17 @@ const MobileMenu = ({
 
             {/* Navigation Items */}
             <div className="flex-1 overflow-y-auto py-6 flex flex-col justify-between">
-              <nav className="px-6 space-y-2" role="navigation">
+              <nav className="px-4 sm:px-6 py-4 sm:py-6 space-y-1 sm:space-y-2" role="navigation">
                 {navigationItems.map((item, index) => (
                   <motion.button
                     key={item.path}
                     onClick={() => handleNavItemClick(item.path)}
                     className={cn(
-                      'w-full flex items-center space-x-4 px-4 py-4 rounded-xl text-left',
+                      'w-full flex items-center space-x-4 px-4 py-4 sm:py-5 rounded-xl text-left min-h-[48px] sm:min-h-[56px]',
                       'transition-all duration-200 group touch-manipulation',
                       isActivePath(item.path)
-                        ? 'bg-primary/15 text-primary border border-primary/30 shadow-lg'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-white/5 active:bg-white/10'
+                        ? 'bg-primary/20 text-primary border border-primary/40 shadow-lg'
+                        : 'text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700 active:bg-slate-200 dark:active:bg-slate-800 border border-transparent hover:border-slate-200 dark:hover:border-slate-600'
                     )}
                     variants={itemVariants}
                     whileHover={{ x: 8, scale: 1.02 }}
@@ -197,10 +197,10 @@ const MobileMenu = ({
                     aria-current={isActivePath(item.path) ? 'page' : undefined}
                   >
                     <div className={cn(
-                      'p-2 rounded-lg transition-colors',
+                      'p-2 rounded-lg transition-colors flex-shrink-0',
                       isActivePath(item.path)
-                        ? 'bg-primary/20 text-primary'
-                        : 'bg-white/5 group-hover:bg-white/10'
+                        ? 'bg-primary/30 text-primary shadow-md'
+                        : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 group-hover:bg-slate-200 dark:group-hover:bg-slate-600 group-hover:text-slate-700 dark:group-hover:text-slate-300'
                     )}>
                       <Icon name={item.icon} size={20} />
                     </div>
@@ -231,15 +231,15 @@ const MobileMenu = ({
                   onClick={item.action}
                   className={cn(
                     'w-full flex items-center space-x-4 px-4 py-4 rounded-xl text-left',
-                    'transition-all duration-200 group touch-manipulation',
-                    'text-muted-foreground hover:text-foreground hover:bg-white/5 active:bg-white/10'
+                    'transition-all duration-200 group touch-manipulation min-h-[48px]',
+                    'text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700 active:bg-slate-200 dark:active:bg-slate-800 border border-transparent hover:border-slate-200 dark:hover:border-slate-600'
                   )}
                   variants={itemVariants}
                   whileHover={{ x: 8, scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   custom={index}
                 >
-                  <div className="p-2 rounded-lg transition-colors bg-white/5 group-hover:bg-white/10">
+                  <div className="p-2 rounded-lg transition-colors bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 group-hover:bg-slate-200 dark:group-hover:bg-slate-600 group-hover:text-slate-700 dark:group-hover:text-slate-300 flex-shrink-0">
                     <Icon name={item.icon} size={20} />
                   </div>
                   <div className="flex-1">
@@ -251,8 +251,8 @@ const MobileMenu = ({
 
             {/* CTA Section */}
             {showCTA && (
-              <motion.div 
-                className="p-6 border-t border-white/10"
+              <motion.div
+                className="p-4 sm:p-6 border-t border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800"
                 variants={itemVariants}
               >
                 <AnimatedButton

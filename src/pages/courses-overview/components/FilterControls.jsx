@@ -43,7 +43,7 @@ const FilterControls = ({
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="glass rounded-xl p-6 mb-6"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 mb-6 border border-slate-200/50 dark:border-slate-700/50"
     >
       {/* Search Bar */}
       <div className="mb-6">

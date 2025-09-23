@@ -25,7 +25,7 @@ const SocialAuth = ({ onGoogleAuth, loading }) => {
           fullWidth
           onClick={onGoogleAuth}
           loading={loading}
-          className="glass border-glass-border hover:bg-muted/50 transition-all duration-300"
+          className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 hover:bg-slate-100/60 dark:hover:bg-slate-800/60 transition-all duration-300"
         >
           <div className="flex items-center justify-center space-x-3">
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ const SocialAuth = ({ onGoogleAuth, loading }) => {
         <Button
           variant="outline"
           size="default"
-          className="glass border-glass-border hover:bg-muted/50 transition-all duration-300"
+          className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 hover:bg-slate-100/60 dark:hover:bg-slate-800/60 transition-all duration-300"
           disabled
         >
           <Icon name="Github" size={20} />
@@ -63,7 +63,7 @@ const SocialAuth = ({ onGoogleAuth, loading }) => {
         <Button
           variant="outline"
           size="default"
-          className="glass border-glass-border hover:bg-muted/50 transition-all duration-300"
+          className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 hover:bg-slate-100/60 dark:hover:bg-slate-800/60 transition-all duration-300"
           disabled
         >
           <Icon name="Linkedin" size={20} />

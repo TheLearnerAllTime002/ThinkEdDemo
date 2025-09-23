@@ -81,7 +81,7 @@ const BadgeGrid = () => {
   };
 
   return (
-    <div className="modern-glass-card rounded-xl p-6">
+    <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-foreground">Achievements</h2>
         <div className="flex items-center space-x-2 text-muted-foreground">
@@ -96,11 +96,11 @@ const BadgeGrid = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1, type: "spring", stiffness: 200 }}
-            className={`relative p-4 rounded-lg border-2 transition-all duration-300 ${
+            className={`relative p-4 rounded-lg border-2 transition-all duration-300 bg-white/80 dark:bg-slate-800/80 border-slate-200/50 dark:border-slate-700/50 ${
               badge?.earned 
-                ? 'bg-gradient-to-br from-white/10 to-white/5 border-white/20 shadow-lg' 
-                : 'bg-muted/30 border-muted/50'
-            } hover:scale-105 cursor-pointer`}
+                ? 'shadow-lg' 
+                : ''
+            } hover:scale-105 hover:border-slate-300/50 dark:hover:border-slate-600/50 cursor-pointer`}
           >
             {badge?.earned && (
               <div className="absolute -top-2 -right-2 w-6 h-6 bg-success rounded-full flex items-center justify-center">

@@ -98,22 +98,20 @@ const Navigation = ({ className }) => {
       <motion.nav
         className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          isScrolled 
-            ? 'glass-nav backdrop-blur-md shadow-lg' 
-            : 'bg-transparent',
+          'bg-background shadow-md',
           className
         )}
         {...navVariants}
       >
         <div className="responsive-container">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20">
             {/* Logo Section */}
             <motion.div
               className="flex items-center cursor-pointer"
               onClick={handleLogoClick}
               {...logoVariants}
             >
-              <div className="w-20 h-20 sm:w-24 sm:h-24">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
                 <AppImage
                   src="/assets/images/thinked-high-resolution-logo-transparent-1757342968260.png"
                   alt="ThinkEd Logo"
@@ -129,7 +127,7 @@ const Navigation = ({ className }) => {
                   key={item.path}
                   onClick={() => handleNavItemClick(item.path)}
                   className={cn(
-                    'flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+                    'flex items-center space-x-3 sm:space-x-4 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
                     isActivePath(item.path)
                       ? 'bg-gradient-to-r from-[#4A9B8E]/20 to-[#F59E0B]/20 text-[#4A9B8E] border border-[#4A9B8E]/30 shadow-lg'
                       : 'text-muted-foreground hover:text-[#4A9B8E] hover:bg-gradient-to-r hover:from-[#4A9B8E]/10 hover:to-[#F59E0B]/10 hover:border hover:border-[#4A9B8E]/20 hover:shadow-md'

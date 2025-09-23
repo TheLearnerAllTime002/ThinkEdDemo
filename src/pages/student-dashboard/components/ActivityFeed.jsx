@@ -61,7 +61,7 @@ const ActivityFeed = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.8 }}
-      className="modern-glass-card rounded-xl p-6"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50"
     >
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-foreground">Recent Activity</h2>
@@ -94,7 +94,7 @@ const ActivityFeed = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="mt-4 pt-4 border-t border-white/10 text-center"
+        className="mt-4 pt-4 border-t border-slate-200/50 dark:border-slate-700/50 text-center"
       >
         <p className="text-xs text-muted-foreground">
           Stay active to earn more XP and badges!

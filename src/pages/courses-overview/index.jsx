@@ -422,7 +422,7 @@ const CoursesOverview = () => {
               animate={{ opacity: 1 }}
               className="text-center py-16"
             >
-              <div className="glass rounded-xl p-8 max-w-md mx-auto">
+              <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-8 max-w-md mx-auto border border-slate-200/50 dark:border-slate-700/50">
                 <Icon name="Search" size={48} color="var(--color-muted-foreground)" className="mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">No courses found</h3>
                 <p className="text-muted-foreground mb-4">
@@ -444,7 +444,7 @@ const CoursesOverview = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="glass rounded-xl p-6"
+          className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50"
         >
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div>

@@ -76,9 +76,11 @@ const HamburgerButton = ({
       onClick={onClick}
       className={cn(
         'relative flex items-center justify-center rounded-lg transition-colors',
-        'glass-button hover:bg-white/10 active:bg-white/15',
+        'relative flex items-center justify-center rounded-lg transition-colors cursor-pointer',
+        'select-none touch-manipulation',
+        'min-w-[44px] min-h-[44px] sm:min-w-[48px] sm:min-h-[48px]',
         'focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2',
-        'touch-manipulation select-none',
+        'active:scale-95',
         sizeClasses[size],
         variant === 'minimal' && 'bg-transparent hover:bg-white/5',
         variant === 'solid' && 'bg-white/10 hover:bg-white/20',

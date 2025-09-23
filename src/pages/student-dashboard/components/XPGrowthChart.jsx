@@ -17,7 +17,7 @@ const XPGrowthChart = () => {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload?.length) {
       return (
-        <div className="modern-glass-card rounded-lg p-3 border border-white/20">
+        <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-lg p-3 border border-slate-200/50 dark:border-slate-700/50">
           <p className="text-sm font-medium text-foreground">{label}</p>
           <p className="text-sm text-primary">
             Total XP: {payload?.[0]?.value?.toLocaleString()}
@@ -36,7 +36,7 @@ const XPGrowthChart = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="modern-glass-card rounded-xl p-6"
+      className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm rounded-xl p-6 border border-slate-200/50 dark:border-slate-700/50"
     >
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-foreground">XP Growth</h2>
@@ -75,7 +75,7 @@ const XPGrowthChart = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <div className="mt-4 grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
+      <div className="mt-4 grid grid-cols-3 gap-4 pt-4 border-t border-slate-200/50 dark:border-slate-700/50">
         <div className="text-center">
           <p className="text-2xl font-bold text-primary">1,250</p>
           <p className="text-xs text-muted-foreground">Total XP</p>

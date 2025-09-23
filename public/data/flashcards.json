@@ -1,0 +1,129 @@
+[
+  {
+    "id": "algebra-basics-1",
+    "title": "Algebra Basics",
+    "subject": "Mathematics",
+    "difficulty": "Beginner",
+    "cards": [
+      {
+        "id": "alg-1",
+        "question": "What is the value of x in the equation: 2x + 3 = 7",
+        "answer": "x = 2",
+        "hint": "Subtract 3 from both sides, then divide by 2",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "alg-2",
+        "question": "Simplify the expression: 3(x + 2) - 2x",
+        "answer": "x + 6",
+        "hint": "Distribute the 3, then combine like terms",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "alg-3",
+        "question": "What is the slope-intercept form of a linear equation?",
+        "answer": "y = mx + b",
+        "hint": "m represents slope, b represents y-intercept",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "alg-4",
+        "question": "Solve for x: 5x - 2 = 3x + 6",
+        "answer": "x = 4",
+        "hint": "Subtract 3x from both sides, add 2 to both sides, then divide by 2",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "alg-5",
+        "question": "What is the quadratic formula?",
+        "answer": "x = [-b ± √(b² - 4ac)] / (2a)",
+        "hint": "Used to solve ax² + bx + c = 0",
+        "difficulty": "Hard"
+      }
+    ],
+    "createdAt": "2024-01-15T10:30:00Z",
+    "lastStudied": "2024-01-20T14:15:00Z",
+    "studyStreak": 3,
+    "averageScore": 85
+  },
+  {
+    "id": "physics-motion-1",
+    "title": "Physics: Motion and Forces",
+    "subject": "Science",
+    "difficulty": "Intermediate",
+    "cards": [
+      {
+        "id": "phy-1",
+        "question": "What is Newton's First Law of Motion?",
+        "answer": "An object at rest stays at rest, and an object in motion stays in motion unless acted upon by an unbalanced force",
+        "hint": "Also known as the law of inertia",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "phy-2",
+        "question": "What is acceleration?",
+        "answer": "The rate of change of velocity with respect to time",
+        "hint": "a = Δv/Δt",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "phy-3",
+        "question": "What is the formula for force?",
+        "answer": "F = ma (Force = mass × acceleration)",
+        "hint": "Newton's Second Law",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "phy-4",
+        "question": "What is velocity?",
+        "answer": "Speed in a given direction",
+        "hint": "Vector quantity, not scalar like speed",
+        "difficulty": "Easy"
+      }
+    ],
+    "createdAt": "2024-01-18T09:15:00Z",
+    "lastStudied": "2024-01-22T16:45:00Z",
+    "studyStreak": 5,
+    "averageScore": 92
+  },
+  {
+    "id": "chem-atoms-1",
+    "title": "Chemistry: Atomic Structure",
+    "subject": "Science",
+    "difficulty": "Beginner",
+    "cards": [
+      {
+        "id": "chem-1",
+        "question": "What is the center of an atom called?",
+        "answer": "Nucleus",
+        "hint": "Contains protons and neutrons",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "chem-2",
+        "question": "What charge does a proton have?",
+        "answer": "Positive (+1)",
+        "hint": "Protons determine the element's identity",
+        "difficulty": "Easy"
+      },
+      {
+        "id": "chem-3",
+        "question": "What is the atomic number?",
+        "answer": "The number of protons in an atom's nucleus",
+        "hint": "Equals the number of electrons in a neutral atom",
+        "difficulty": "Medium"
+      },
+      {
+        "id": "chem-4",
+        "question": "What particles orbit the nucleus?",
+        "answer": "Electrons",
+        "hint": "Negatively charged particles",
+        "difficulty": "Easy"
+      }
+    ],
+    "createdAt": "2024-01-20T11:00:00Z",
+    "lastStudied": null,
+    "studyStreak": 0,
+    "averageScore": 0
+  }
+]

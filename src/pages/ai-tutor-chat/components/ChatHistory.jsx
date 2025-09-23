@@ -88,10 +88,10 @@ const ChatHistory = ({ isOpen, onClose, onSelectSession }) => {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-full max-w-md glass border-l border-glass-border z-50 flex flex-col"
+            className="fixed top-0 right-0 h-full w-full max-w-md bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-l border-slate-200/50 dark:border-slate-700/50 z-50 flex flex-col"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-glass-border">
+            <div className="flex items-center justify-between p-4 border-b border-slate-200/50 dark:border-slate-700/50">
               <div className="flex items-center space-x-2">
                 <Icon name="History" size={20} color="var(--color-primary)" />
                 <h3 className="text-lg font-semibold">Chat History</h3>
@@ -105,7 +105,7 @@ const ChatHistory = ({ isOpen, onClose, onSelectSession }) => {
             </div>
 
             {/* Search */}
-            <div className="p-4 border-b border-glass-border">
+            <div className="p-4 border-b border-slate-200/50 dark:border-slate-700/50">
               <div className="relative">
                 <Icon 
                   name="Search" 
@@ -115,7 +115,7 @@ const ChatHistory = ({ isOpen, onClose, onSelectSession }) => {
                 <input
                   type="text"
                   placeholder="Search conversations..."
-                  className="w-full pl-10 pr-4 py-2 rounded-lg glass border border-glass-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 rounded-lg bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/50 transition-all text-foreground placeholder:text-muted-foreground"
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ const ChatHistory = ({ isOpen, onClose, onSelectSession }) => {
                     }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full p-3 rounded-lg glass border border-glass-border hover:bg-muted/50 transition-colors text-left"
+                    className="w-full p-3 rounded-lg bg-slate-50/80 dark:bg-slate-800/80 border border-slate-200/50 dark:border-slate-700/50 hover:bg-slate-100/80 dark:hover:bg-slate-700/80 transition-colors text-left"
                   >
                     <div className="flex items-start space-x-3">
                       <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -176,7 +176,7 @@ const ChatHistory = ({ isOpen, onClose, onSelectSession }) => {
             </div>
 
             {/* Footer */}
-            <div className="p-4 border-t border-glass-border">
+            <div className="p-4 border-t border-slate-200/50 dark:border-slate-700/50">
               <Button
                 variant="outline"
                 fullWidth

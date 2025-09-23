@@ -16,12 +16,12 @@ const AnimatedCard = React.forwardRef(({
   const { getAnimationProps } = useAnimationConfig();
 
   const variants = {
-    default: 'glass-card-enhanced bg-card text-card-foreground',
-    glass: 'glass-enhanced bg-white/5 backdrop-blur-md border border-white/10',
-    frosted: 'frosted-glass bg-white/5',
-    liquid: 'liquid-glass bg-gradient-to-br from-white/10 to-white/5',
-    gradient: 'glass-gradient-primary bg-gradient-to-br from-primary/10 to-secondary/10',
-    outline: 'border border-border bg-background/50 backdrop-blur-sm',
+    default: 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 text-foreground shadow-lg',
+    glass: 'bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm border border-slate-200/40 dark:border-slate-600/40 text-foreground shadow-lg',
+    frosted: 'bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm border border-slate-200/40 dark:border-slate-600/40 text-foreground shadow-lg',
+    liquid: 'bg-gradient-to-br from-white/90 to-white/95 dark:from-slate-800/90 dark:to-slate-900/95 backdrop-blur-sm border border-slate-200/40 dark:border-slate-600/40 text-foreground shadow-lg',
+    gradient: 'bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 dark:border-primary/30 text-foreground shadow-lg',
+    outline: 'bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-300/60 dark:border-slate-600/60 text-foreground shadow-lg',
     solid: 'bg-card border border-border shadow-lg'
   };
 
@@ -107,7 +107,7 @@ const AnimatedCard = React.forwardRef(({
         {children}
       </div>
 
-      {/* Glow effect for certain variants */}
+      {/* Glow effect for gradient variant */}
       {(variant === 'glass' || variant === 'gradient') && (
         <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-xl" />
