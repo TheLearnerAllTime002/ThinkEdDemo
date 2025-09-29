@@ -12,6 +12,7 @@ import ThemeToggle from '../ui/ThemeToggle';
 import LanguageSelector from '../ui/LanguageSelector';
 import Icon from '../AppIcon';
 import AppImage from '../AppImage';
+import { A11yToggle } from '../ui/A11yToggle';
 
 const Navigation = ({ className }) => {
   const navigate = useNavigate();
@@ -104,7 +105,7 @@ const Navigation = ({ className }) => {
         {...navVariants}
       >
         <div className="responsive-container">
-          <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20">
+          <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20" id="main-content">
             {/* Logo Section */}
             <motion.div
               className="flex items-center cursor-pointer"
@@ -148,6 +149,7 @@ const Navigation = ({ className }) => {
             <div className="hidden lg:flex items-center space-x-3">
               <LanguageSelector variant="dropdown" />
               <ThemeToggle variant="icon" size="md" />
+              <A11yToggle />
               <AnimatedButton
                 variant="gradient"
                 size="md"
@@ -164,6 +166,7 @@ const Navigation = ({ className }) => {
             <div className="lg:hidden flex items-center space-x-2">
               <LanguageSelector variant="flags" />
               <ThemeToggle variant="icon" size="sm" />
+              <A11yToggle />
               <HamburgerButton
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

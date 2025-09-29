@@ -1,6 +1,10 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { simpleTTS } from '../utils/simpleTTS';
 
 const AccessibilityContext = createContext();
+
+const AKEY = 'thinked:a11y';
+const TKEY = 'thinked:tts';
 
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
@@ -11,77 +15,77 @@ export const useAccessibility = () => {
 };
 
 export const AccessibilityProvider = ({ children }) => {
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [textToSpeechEnabled, setTextToSpeechEnabled] = useState(false);
-  const [highContrast, setHighContrast] = useState(false);
+  const [isA11yOn, setIsA11yOn] = useState(() => {
+    try { return localStorage.getItem(AKEY) === '1'; } catch { return false; }
+  });
 
-  // Check for user preferences on mount
+  const [ttsSettings, setTts] = useState(() => {
+    try {
+      const saved = localStorage.getItem(TKEY);
+      return saved ? JSON.parse(saved) : { rate: 1, pitch: 1, volume: 1, voiceURI: undefined, language: 'en', useOffline: false };
+    } catch { return { rate: 1, pitch: 1, volume: 1, voiceURI: undefined, language: 'en', useOffline: false }; }
+  });
+
+  const synthRef = useRef(window.speechSynthesis);
+  const utterRef = useRef(null);
+
   useEffect(() => {
-    // Check for reduced motion preference
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReducedMotion(mediaQuery.matches);
-    
-    const handleReducedMotionChange = (e) => {
-      setReducedMotion(e.matches);
-    };
-    
-    mediaQuery.addEventListener('change', handleReducedMotionChange);
-    
-    // Load settings from localStorage
-    const savedReducedMotion = localStorage.getItem('reducedMotion');
-    const savedTextToSpeech = localStorage.getItem('textToSpeechEnabled');
-    const savedHighContrast = localStorage.getItem('highContrast');
-    
-    if (savedReducedMotion !== null) {
-      setReducedMotion(JSON.parse(savedReducedMotion));
+    document.documentElement.classList.toggle('a11y-on', isA11yOn);
+    try { localStorage.setItem(AKEY, isA11yOn ? '1' : '0'); } catch {}
+  }, [isA11yOn]);
+
+  useEffect(() => {
+    try { localStorage.setItem(TKEY, JSON.stringify(ttsSettings)); } catch {}
+  }, [ttsSettings]);
+
+  const getVoices = () => synthRef.current.getVoices();
+
+  const playText = async (text) => {
+    try {
+      await simpleTTS.speak(text, ttsSettings.language || 'en', {
+        rate: ttsSettings.rate,
+        pitch: ttsSettings.pitch,
+        volume: ttsSettings.volume
+      });
+    } catch (error) {
+      console.error('TTS failed:', error);
     }
-    
-    if (savedTextToSpeech !== null) {
-      setTextToSpeechEnabled(JSON.parse(savedTextToSpeech));
-    }
-    
-    if (savedHighContrast !== null) {
-      setHighContrast(JSON.parse(savedHighContrast));
-    }
-    
-    return () => {
-      mediaQuery.removeEventListener('change', handleReducedMotionChange);
-    };
-  }, []);
-
-  // Save settings to localStorage when they change
-  useEffect(() => {
-    localStorage.setItem('reducedMotion', JSON.stringify(reducedMotion));
-  }, [reducedMotion]);
-
-  useEffect(() => {
-    localStorage.setItem('textToSpeechEnabled', JSON.stringify(textToSpeechEnabled));
-  }, [textToSpeechEnabled]);
-
-  useEffect(() => {
-    localStorage.setItem('highContrast', JSON.stringify(highContrast));
-  }, [highContrast]);
-
-  const toggleReducedMotion = () => {
-    setReducedMotion(prev => !prev);
   };
 
-  const toggleTextToSpeech = () => {
-    setTextToSpeechEnabled(prev => !prev);
+  const speakElement = (el) => {
+    if (!el) return;
+    const text = el.getAttribute('aria-label') || el.innerText || el.textContent || '';
+    playText(text.trim());
   };
 
-  const toggleHighContrast = () => {
-    setHighContrast(prev => !prev);
+  const stop = () => synthRef.current.cancel();
+  const pause = () => synthRef.current.pause();
+  const resume = () => synthRef.current.resume();
+
+  const toggleA11y = (val) => {
+    const newVal = typeof val === 'boolean' ? val : !isA11yOn;
+    if (!newVal) {
+      stop();
+    }
+    setIsA11yOn(newVal);
   };
 
   return (
     <AccessibilityContext.Provider value={{
-      reducedMotion,
-      textToSpeechEnabled,
-      highContrast,
-      toggleReducedMotion,
-      toggleTextToSpeech,
-      toggleHighContrast
+      isA11yOn,
+      toggleA11y,
+      ttsSettings,
+      setTtsSettings: (partial) => setTts(s => ({ ...s, ...partial })),
+      tts: {
+        supported: !!('speechSynthesis' in window),
+        playText,
+        speakElement,
+        stop,
+        pause,
+        resume,
+        getVoices,
+        getSupportedLanguages: () => simpleTTS.getSupportedLanguages()
+      }
     }}>
       {children}
     </AccessibilityContext.Provider>

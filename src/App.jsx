@@ -4,7 +4,9 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { AppProvider } from "./contexts/AppContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AuthProvider } from "./contexts/AuthContext";
+import { AccessibilityProvider } from "./contexts/AccessibilityContext";
 import BackgroundEffects from "./components/layout/BackgroundEffects";
+import { AccessibilityPanel } from "./components/ui/AccessibilityPanel";
 import { performanceMonitor } from "./utils/animationConfig";
 
 function App() {
@@ -22,23 +24,33 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <LanguageProvider>
-        <AppProvider>
-          <AuthProvider>
-            <div className="relative min-h-screen">
-              {/* Global Background Effects */}
-              <BackgroundEffects className="fixed inset-0 z-0" variant="minimal" />
+    <AccessibilityProvider>
+      <ThemeProvider>
+        <LanguageProvider>
+          <AppProvider>
+            <AuthProvider>
+              {/* Skip to content link */}
+              <a href="#main-content" className="skip-link">
+                Skip to main content
+              </a>
               
-              {/* Main Application */}
-              <div className="relative z-10">
-                <Routes />
+              <div className="relative min-h-screen">
+                {/* Global Background Effects */}
+                <BackgroundEffects className="fixed inset-0 z-0" variant="minimal" />
+                
+                {/* Main Application */}
+                <div className="relative z-10">
+                  <Routes />
+                </div>
+                
+                {/* Accessibility Panel */}
+                <AccessibilityPanel />
               </div>
-            </div>
-          </AuthProvider>
-        </AppProvider>
-      </LanguageProvider>
-    </ThemeProvider>
+            </AuthProvider>
+          </AppProvider>
+        </LanguageProvider>
+      </ThemeProvider>
+    </AccessibilityProvider>
   );
 }
 
